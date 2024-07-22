@@ -1,5 +1,7 @@
 package org.example;
 
 public class PhoneBook {
-    // пустой класс
+    public int add(String name, String number) {
+        return 0;
+    }
 }
