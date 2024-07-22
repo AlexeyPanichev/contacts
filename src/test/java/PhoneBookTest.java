@@ -26,4 +26,19 @@ public class PhoneBookTest {
         String name = phoneBook.findByNumber("123456");
         assertNull(name);
     }
+
+    @Test
+    public void testFindByName() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("John", "123456");
+        String number = phoneBook.findByName("John");
+        assertEquals("123456", number);
+    }
+
+    @Test
+    public void testFindByNameNotFound() {
+        PhoneBook phoneBook = new PhoneBook();
+        String number = phoneBook.findByName("John");
+        assertNull(number);
+    }
 }
