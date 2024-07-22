@@ -31,7 +31,7 @@ public class PhoneBookTest {
     public void testFindByName() {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Boba", "123456");
-        String number = phoneBook.findByName("John");
+        String number = phoneBook.findByName("Boba");
         assertEquals("123456", number);
     }
 

@@ -1,7 +1,6 @@
 package org.example;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class PhoneBook {
     private Map<String, String> contacts = new HashMap<>();
@@ -28,6 +27,10 @@ public class PhoneBook {
     }
 
     public void printAllNames() {
-
+        List<String> names = new ArrayList<>(contacts.keySet());
+        Collections.sort(names);
+        for (String name : names) {
+            System.out.println(name);
+        }
     }
 }
